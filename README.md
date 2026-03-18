@@ -1,27 +1,41 @@
-# DealScope
+# dealscope
 
-> AI-Powered Real Estate Deal Analyzer
+**AI-powered real estate deal analyzer and investment scanner**
 
-## Overview
+![Build](https://img.shields.io/badge/build-passing-brightgreen) ![License](https://img.shields.io/badge/license-proprietary-red)
 
-DealScope uses AI to analyze real estate investment opportunities. It scans listings, calculates ROI projections, assesses neighborhood trends, and surfaces the best deals based on your investment criteria.
-
-## Key Features
-
-- ****
-
-## Tech Stack
-
-Python,scikit-learn,React,PostgreSQL,Mapbox
-
-## Getting Started
-
+## Install
 ```bash
-git clone https://github.com/MukundaKatta/dealscope.git
-cd dealscope
-pip install -e .
+npm install
 ```
 
----
+## Quick Start
+```typescript
+import { Dealscope } from "./dealscope";
+const instance = new Dealscope()
+const r = await instance.detect({ input: 'test' })
+```
 
-**Mukunda Katta** · [Officethree Technologies](https://github.com/MukundaKatta/Office3) · 2026
+## CLI
+```bash
+npx tsx src/cli.ts status
+npx tsx src/cli.ts run --input "data"
+```
+
+## API
+| Method | Description |
+|--------|-------------|
+| `detect()` | Detect |
+| `scan()` | Scan |
+| `monitor()` | Monitor |
+| `alert()` | Alert |
+| `get_report()` | Get report |
+| `configure()` | Configure |
+
+## Test
+```bash
+npx vitest
+```
+
+## License
+(c) 2026 Officethree Technologies. All Rights Reserved.
